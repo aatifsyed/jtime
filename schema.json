@@ -1,0 +1,128 @@
+{
+  "description": "outputs from GNU time",
+  "type": "object",
+  "required": [
+    "avg_mem_kb",
+    "avg_rss_kb",
+    "avg_shared_text_kb",
+    "avg_unshared_data_kb",
+    "avg_unshared_stack_kb",
+    "command",
+    "cpu_kernel_secs",
+    "cpu_pc",
+    "cpu_user_secs",
+    "ctx_switch_forced_ct",
+    "ctx_switch_yield_ct",
+    "elapsed_real_hms",
+    "elapsed_real_secs",
+    "exit_status",
+    "fs_inputs_ct",
+    "fs_outputs_ct",
+    "max_rss_kb",
+    "pg_fault_io_major_ct",
+    "pg_fault_minor_ct",
+    "signals_recv_ct",
+    "socket_recv_ct",
+    "socket_sent_ct",
+    "swap_ct",
+    "system_pg_size_bytes"
+  ],
+  "properties": {
+    "avg_mem_kb": {
+      "description": "Average total (data+stack+text) memory use of the process, in Kilobytes.",
+      "type": "number"
+    },
+    "avg_rss_kb": {
+      "description": "Average resident set size of the process, in Kilobytes.",
+      "type": "number"
+    },
+    "avg_shared_text_kb": {
+      "description": "Average amount of shared text in the process, in Kilobytes.",
+      "type": "number"
+    },
+    "avg_unshared_data_kb": {
+      "description": "Average size of the process's unshared data area, in Kilobytes.",
+      "type": "number"
+    },
+    "avg_unshared_stack_kb": {
+      "description": "Average unshared stack size of the process, in Kilobytes.",
+      "type": "number"
+    },
+    "command": {
+      "description": "Name and command line arguments of the command being timed.",
+      "type": "string"
+    },
+    "cpu_kernel_secs": {
+      "description": "Total number of CPU-seconds used by the system on behalf of the process (in kernel mode), in seconds.",
+      "type": "number"
+    },
+    "cpu_pc": {
+      "description": "Percentage of the CPU that this job got.  This is just user + system times divided by the total running time.  It also prints a percentage sign.",
+      "type": "string"
+    },
+    "cpu_user_secs": {
+      "description": "Total number of CPU-seconds that the process used directly (in user mode), in seconds.",
+      "type": "number"
+    },
+    "ctx_switch_forced_ct": {
+      "description": "Number of times the process was context-switched involuntarily (because the time slice expired).",
+      "type": "number"
+    },
+    "ctx_switch_yield_ct": {
+      "description": "Number of times that the program was context-switched voluntarily, for instance while waiting for an I/O operation to complete.",
+      "type": "number"
+    },
+    "elapsed_real_hms": {
+      "description": "Elapsed real (wall clock) time used by the process, in [hours:]minutes:seconds.",
+      "type": "string"
+    },
+    "elapsed_real_secs": {
+      "description": "Elapsed real (wall clock) time used by the process, in seconds.",
+      "type": "number"
+    },
+    "exit_status": {
+      "description": "Exit status of the command.",
+      "type": "number"
+    },
+    "fs_inputs_ct": {
+      "description": "Number of file system inputs by the process.",
+      "type": "number"
+    },
+    "fs_outputs_ct": {
+      "description": "Number of file system outputs by the process.",
+      "type": "number"
+    },
+    "max_rss_kb": {
+      "description": "Maximum resident set size of the process during its lifetime, in Kilobytes.",
+      "type": "number"
+    },
+    "pg_fault_io_major_ct": {
+      "description": "Number of major, or I/O-requiring, page faults that occurred while the process was running. These are faults where the page has actually migrated out of primary memory.",
+      "type": "number"
+    },
+    "pg_fault_minor_ct": {
+      "description": "Number of minor, or recoverable, page faults.  These are pages that are not valid (so they fault) but which have not yet been claimed by other virtual pages.  Thus the data in the page is still valid but the system tables must be updated.",
+      "type": "number"
+    },
+    "signals_recv_ct": {
+      "description": "Number of signals delivered to the process.",
+      "type": "number"
+    },
+    "socket_recv_ct": {
+      "description": "Number of socket messages received by the process.",
+      "type": "number"
+    },
+    "socket_sent_ct": {
+      "description": "Number of socket messages sent by the process.",
+      "type": "number"
+    },
+    "swap_ct": {
+      "description": "Number of times the process was swapped out of main memory.",
+      "type": "number"
+    },
+    "system_pg_size_bytes": {
+      "description": "System's page size, in bytes.  This is a per-system constant, but varies between systems.",
+      "type": "number"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+key	type	spec	description
+command	string	C	Name and command line arguments of the command being timed.
+avg_unshared_data_kb	number	D	Average size of the process's unshared data area, in Kilobytes.
+elapsed_real_hms	string	E	Elapsed real (wall clock) time used by the process, in [hours:]minutes:seconds.
+pg_fault_io_major_ct	number	F	Number of major, or I/O-requiring, page faults that occurred while the process was running. These are faults where the page has actually migrated out of primary memory.
+fs_inputs_ct	number	I	Number of file system inputs by the process.
+avg_mem_kb	number	K	Average total (data+stack+text) memory use of the process, in Kilobytes.
+max_rss_kb	number	M	Maximum resident set size of the process during its lifetime, in Kilobytes.
+fs_outputs_ct	number	O	Number of file system outputs by the process.
+cpu_pc	string	P	Percentage of the CPU that this job got.  This is just user + system times divided by the total running time.  It also prints a percentage sign.
+pg_fault_minor_ct	number	R	Number of minor, or recoverable, page faults.  These are pages that are not valid (so they fault) but which have not yet been claimed by other virtual pages.  Thus the data in the page is still valid but the system tables must be updated.
+cpu_kernel_secs	number	S	Total number of CPU-seconds used by the system on behalf of the process (in kernel mode), in seconds.
+cpu_user_secs	number	U	Total number of CPU-seconds that the process used directly (in user mode), in seconds.
+swap_ct	number	W	Number of times the process was swapped out of main memory.
+avg_shared_text_kb	number	X	Average amount of shared text in the process, in Kilobytes.
+system_pg_size_bytes	number	Z	System's page size, in bytes.  This is a per-system constant, but varies between systems.
+ctx_switch_forced_ct	number	c	Number of times the process was context-switched involuntarily (because the time slice expired).
+elapsed_real_secs	number	e	Elapsed real (wall clock) time used by the process, in seconds.
+signals_recv_ct	number	k	Number of signals delivered to the process.
+avg_unshared_stack_kb	number	p	Average unshared stack size of the process, in Kilobytes.
+socket_recv_ct	number	r	Number of socket messages received by the process.
+socket_sent_ct	number	s	Number of socket messages sent by the process.
+avg_rss_kb	number	t	Average resident set size of the process, in Kilobytes.
+ctx_switch_yield_ct	number	w	Number of times that the program was context-switched voluntarily, for instance while waiting for an I/O operation to complete.
+exit_status	number	x	Exit status of the command.
